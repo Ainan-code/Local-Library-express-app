@@ -41,8 +41,7 @@ app.use(compression()); // Compress all routes
 const mongoose = require("mongoose");
 mongoose.set("strictQuery", false);
 
-const dev_db_url =
-"mongodb+srv://ainanidlehassan:tNIxyS2mBQWgBCHu@cluster0.xkzz0qq.mongodb.net/local-library?retryWrites=true&w=majority&appName=Cluster0"
+
 const mongoDB = process.env.MONGODB_URI || dev_db_url;
 
 main().catch((err) => console.log(err));
@@ -51,7 +50,6 @@ async function main() {
 }
 
 
-"mongodb+srv://ainanidlehassan:tNIxyS2mBQWgBCHu@cluster0.xkzz0qq.mongodb.net/local-library?retryWrites=true&w=majority&appName=Cluster0"
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
